@@ -1,0 +1,118 @@
+@import 'bourbon/bourbon'
+
+input
+    font-size: 15px
+    width: 100%
+    padding: 10px
+    border: 2px solid $accent-color
+    @include box-sizing(border-box)
+
+    &:focus
+        outline: none
+        border-color: $accent-light
+
+    &:disabled
+        border-color: $accent-light
+
+    &#custom_checkbox
+        width: auto
+
+textarea
+    @extend input
+
+label
+    display: block
+
+button
+    padding: 20px
+    font-size: 15px
+    cursor: pointer
+    width: 100%
+    background: $accent-color
+    text-transform: uppercase
+    border-style: none
+    color: #fff
+
+    &:hover
+        background: $accent-light
+        color: $theme-color
+
+/* Main form */
+.wrapper
+    margin: 0 auto
+    padding: 10px
+    box-shadow: 5px 5px 5px $shadow-color
+    background-color: #fff
+    max-width: 600px
+
+.form-container
+    min-height: 700px
+
+#contact_form
+    margin: 0 auto
+    max-width: 425px
+    padding: 10px
+    /* Expand div height */
+    /*overflow: auto*/
+
+/* Span for individual form items */
+.form-item
+    display: inline-block
+    margin: 0 auto
+    width: 49%
+    padding: 10px 0
+
+    &.left
+        float: left
+
+    &.right
+        float: right
+
+    &.long
+        display: block
+        width: 100%
+
+#custom_checkbox
+    margin-right: 5px
+
+    &:checked
+        background: $accent-color
+
+#subject
+    width: 100%
+
+.custom-checkbox
+    display: inline-block
+    font-size: 12px
+    color: $theme-color
+    float: right
+    white-space: nowrap
+    text-align: right
+
+#message
+    width: 100%
+
+/* Output div */
+.output
+    text-align: center
+    color: $accent-color
+    font-weight: bold
+    font-size: 20px
+    opacity: 0
+    @include transition( all 1.0s )
+
+/* Responsive CSS */
+@media only screen and ( max-width: 768px )
+    .wrapper
+        margin: 0 10px
+
+    .form-item
+        width: 100%
+
+        &.left &.right
+            float: none
+
+    .custom-checkbox
+        /*padding-right: 10px*/
+
+@media only screen and ( max-width: 568px )
