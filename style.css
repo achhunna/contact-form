@@ -81,6 +81,14 @@ button {
 #message {
   width: 100%; }
 
+a.back-link {
+  display: block;
+  padding: 10px;
+  color: #F5B7B1;
+  text-decoration: none; }
+  a.back-link:hover {
+    text-decoration: underline; }
+
 /* Output div */
 .output {
   text-align: center;

@@ -48,13 +48,15 @@ function submit_form() {
     } );
 }
 
-// Clear input boxes
+// Clear input boxes and uncheck checkbox
 function clear_form() {
     var form_ids = [ 'name', 'email', 'to', 'subject', 'message' ];
 
     for ( id in form_ids ) {
         $( '#' + form_ids[ id ] ).val( '' );
     }
+
+    $( '#custom_checkbox' ).prop( 'checked', false );
 }
 
 // Verify name
